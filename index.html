@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FinGuide Expert — Финансовый консалтинг и коучинг</title>
+  <meta name="description" content="Айнур Рысмаганбетова — профессиональный бухгалтер, финансовый коуч и налоговый эксперт. Помогаю предпринимателям навести порядок в финансах и выстроить грамотный учёт." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://finguide.kz/" />
+  <meta property="og:title" content="FinGuide Expert — Финансовый консалтинг и коучинг" />
+  <meta property="og:description" content="Айнур Рысмаганбетова — профессиональный бухгалтер, финансовый коуч и налоговый эксперт. Помогаю предпринимателям навести порядок в финансах и выстроить грамотный учёт." />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="FinGuide Expert — Финансовый консалтинг и коучинг" />
+  <meta name="twitter:description" content="Айнур Рысмаганбетова — профессиональный бухгалтер, финансовый коуч и налоговый эксперт." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: #fff;
+      color: #111;
+      padding-bottom: 80px;
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    
+
+    /* HEADER NAV */
+    .site-header {
+      background: #fff;
+      border-bottom: 2px dashed #bbb;
+      padding: 0 32px;
+    }
+    .site-header .header-inner {
+      max-width: 960px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+      gap: 24px;
+    }
+    .site-header .header-logo {
+      font-size: 18px;
+      font-weight: 800;
+      color: #111;
+      white-space: nowrap;
+      font-family: 'Montserrat', sans-serif;
+    }
+    .site-header .header-nav {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      flex-wrap: wrap;
+    }
+    .site-header .nav-link {
+      font-size: 13px;
+      font-weight: 500;
+      font-family: 'Montserrat', sans-serif;
+      color: #444;
+      padding: 6px 12px;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background 0.15s, color 0.15s;
+    }
+    .site-header .nav-link:hover { background: #f3f4f6; color: #111; }
+    .site-header .burger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 6px;
+      border: none;
+      background: none;
+    }
+    .site-header .burger span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: #111;
+      border-radius: 2px;
+      transition: all 0.2s;
+    }
+    .site-header .mobile-menu {
+      display: none;
+      flex-direction: column;
+      background: #fff;
+      border-top: 1px solid #e5e5e5;
+      padding: 12px 0;
+    }
+    .site-header .mobile-menu a {
+      font-size: 14px;
+      font-weight: 500;
+      color: #333;
+      padding: 10px 24px;
+      text-decoration: none;
+    }
+    .site-header .mobile-menu a:hover { background: #f3f4f6; }
+    .site-header.menu-open .mobile-menu { display: flex; }
+    @media (max-width: 640px) {
+      .site-header .header-nav { display: none; }
+      .site-header .burger { display: flex; }
+      .site-header { padding: 0 16px; }
+    }
+
+    
+
+    /* PAGE STRUCTURE */
+    .page-block {
+      border-bottom: 3px solid #e5e5e5;
+      padding: 60px 24px;
+    }
+    .page-block:nth-child(even) { background: #fafafa; }
+    .page-block:last-child { border-bottom: none; }
+    .block-inner {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .block-num {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #999;
+      margin-bottom: 8px;
+    }
+    .block-type {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      background: #111;
+      color: #fff;
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 3px;
+      margin-bottom: 16px;
+    }
+
+    
+    
+    
+
+    .field-heading {
+      font-size: clamp(22px, 5vw, 36px);
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 16px;
+      display: block;
+    }
+    .field-sub {
+      font-size: clamp(15px, 3vw, 20px);
+      font-weight: 500;
+      color: #444;
+      line-height: 1.5;
+      margin-bottom: 12px;
+      display: block;
+    }
+    .field-body {
+      font-size: 15px;
+      line-height: 1.75;
+      color: #333;
+      display: block;
+      margin-bottom: 10px;
+    }
+    .field-label {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #666;
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    /* ITEMS LIST */
+    .items-list { display: flex; flex-direction: column; gap: 16px; margin-top: 16px; }
+    .item-card {
+      border: 1px solid #e5e5e5;
+      border-radius: 8px;
+      padding: 16px 20px;
+      position: relative;
+    }
+    .item-card:has(.item-num) {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+    }
+    .item-num {
+      font-size: 52px;
+      font-weight: 900;
+      color: #ececec;
+      line-height: 1;
+      min-width: 64px;
+      text-align: center;
+      flex-shrink: 0;
+      user-select: none;
+    }
+    .item-content { display: flex; flex-direction: column; flex: 1; }
+    .item-card .field-heading { font-size: 18px; margin-bottom: 8px; }
+    .item-card .field-body { margin-bottom: 0; }
+
+    /* QUOTE DIVIDER */
+    .quote-divider {
+      padding: 40px 40px;
+      text-align: center;
+      border-top: 1px solid #ececec;
+      border-bottom: 1px solid #ececec;
+      background: #f9f9f9;
+    }
+    .quote-divider .quote-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #aaa;
+      margin-bottom: 12px;
+    }
+    .quote-divider .quote-text {
+      font-size: 20px;
+      font-weight: 600;
+      color: #222;
+      line-height: 1.5;
+      max-width: 640px;
+      margin: 0 auto;
+    }
+
+    /* CTA */
+    .cta-box {
+      border: 2px solid #111;
+      border-radius: 8px;
+      padding: 24px;
+      margin-top: 16px;
+      text-align: center;
+    }
+
+    /* DIVIDER */
+    hr.section-div {
+      border: none;
+      border-top: 1px dashed #ccc;
+      margin: 20px 0;
+    }
+
+    /* NOTES */
+    .note {
+      font-size: 12px;
+      color: #999;
+      font-style: italic;
+      margin-top: 8px;
+    }
+
+    @media (max-width: 600px) {
+      .topbar { padding: 10px 14px; }
+      .page-block { padding: 48px 18px; }
+      .items-list { gap: 14px; }
+    }
+  </style>
+</head>
+<body>
+</div>
+
+<!-- HEADER -->
+<header class="site-header" id="site-header">
+  <div class="header-inner">
+    <div class="header-logo">FinGuide Expert</div>
+    <nav class="header-nav">
+      <a class="nav-link" href="#solution">Услуги</a>
+      <a class="nav-link" href="#expert">Об эксперте</a>
+      <a class="nav-link" href="#results">Результаты</a>
+      <a class="nav-link" href="#game">Игра</a>
+      <a class="nav-link" href="#faq">FAQ</a>
+      <a class="nav-link" href="#contacts">Контакты</a>
+    </nav>
+    <button class="burger" onclick="document.getElementById('site-header').classList.toggle('menu-open')" aria-label="Меню">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-menu">
+    <a href="#hero">Блок 01 — Главный экран</a>
+    <a href="#problem">Блок 02 — Боль / Проблема</a>
+    <a href="#solution">Блок 03 — Решение / Услуги</a>
+    <a href="#expert">Блок 04 — Об эксперте</a>
+    <a href="#process">Блок 05 — Как работаю</a>
+    <a href="#results">Блок 06 — Результаты</a>
+    <a href="#game">Блок 07 — Трансформационная игра</a>
+    <a href="#faq">Блок 08 — FAQ</a>
+    <a href="#reviews">Блок 09 — Отзывы</a>
+    <a href="#contacts">Блок 10 — Финальный CTA</a>
+  </div>
+</header>
+
+<!-- BLOCK 01: HERO -->
+<div class="page-block" data-block="hero">
+  <div class="block-num">Блок 01</div>
+  <div class="block-type">Главный экран / Hero</div>
+
+  <span class="field-label">Надпись над заголовком (тег)</span>
+  <span class="field-body">Финансовый эксперт · Актобе · Казахстан</span>
+
+  <span class="field-label" style="margin-top:16px">Главный заголовок</span>
+  <span class="field-heading">Наведем идеальный порядок в финансах и налогах<br></span>
+
+  <span class="field-label" style="margin-top:16px">Подзаголовок</span>
+  <span class="field-sub">Помогу предпринимателям, бухгалтерам и стартаперам навести порядок в учёте, оптимизировать налоги и выстроить финансовую грамотность один раз и надолго.</span>
+
+  <div class="cta-box" style="margin-top:24px">
+    <span class="field-label">Кнопка (призыв к действию)</span>
+    <span class="field-heading" style="font-size:20px">Записаться на консультацию</span>
+  </div>
+</div>
+
+<!-- BLOCK 02: PROBLEM -->
+<div class="page-block" data-block="problem">
+  <div class="block-num">Блок 02</div>
+  <div class="block-type">Боль / Проблема клиента</div>
+
+  <span class="field-label">Заголовок блока</span>
+  <span class="field-heading">Узнаёте себя?</span>
+
+  <span class="field-label" style="margin-top:16px">Вводный текст</span>
+  <span class="field-sub">Многие предприниматели и специалисты сталкиваются с одними и теми же проблемами в финансах.</span>
+
+  <div class="items-list">
+    <div class="item-card">
+      <span class="field-heading">Хаос в учёте</span>
+      <span class="field-body">Деньги приходят и уходят, но непонятно куда. Нет чёткой картины финансов бизнеса - только ощущение что «что-то идёт не так».</span>
+    </div>
+    <div class="item-card">
+      <span class="field-heading">Страх налогов и проверок</span>
+      <span class="field-body">Налоговое законодательство меняется, штрафы растут. Страшно сделать ошибку и получить неприятности от налоговой.</span>
+    </div>
+    <div class="item-card">
+      <span class="field-heading">Нет финансовой грамотности</span>
+      <span class="field-body">Открыл бизнес, но не знаю как правильно вести ИП, платить налоги, считать прибыль.<br></span>
+    </div>
+    <div class="item-card">
+      <span class="field-heading">Потолок в карьере бухгалтера</span>
+      <span class="field-body">Работаешь в профессии, но хочется большего: стать экспертом, повысить ценность, зарабатывать больше. Непонятно куда двигаться.</span>
+    </div>
+  </div>
+</div>
+
+<!-- BLOCK 03: SOLUTION -->
+<div class="page-block" data-block="solution">
+  <div class="block-num">Блок 03</div>
+  <div class="block-type">Решение / Что предлагаю</div>
+
+  <span class="field-label">Заголовок</span>
+  <span class="field-heading">FinGuide Expert<br>Ваш финансовый навигатор</span>
+
+  <span class="field-label" style="margin-top:16px">Описание</span>
+  <span class="field-sub">Не просто консультация - сопровождение до результата.<br>Работаю с каждым клиентом индивидуально, пока задача не решена.</span>
+
+  <div class="items-list">
+    <div class="item-card">
+      <div class="item-num">01</div>
+      <div class="item-content">
+        <span class="field-heading">Налоговый консалтинг</span>
+        <span class="field-body">Аудит налоговой нагрузки, оптимизация, сопровождение при проверках. Работаю с ИП, ТОО, самозанятыми в Казахстане.</span>
+      </div>
+    </div>
+    <div class="item-card">
+      <div class="item-num">02</div>
+      <div class="item-content">
+        <span class="field-heading">Финансовый коучинг</span>
+        <span class="field-body">Индивидуальная работа с предпринимателем: бюджет, денежный поток, точка безубыточности, финансовые цели.</span>
+      </div>
+    </div>
+    <div class="item-card">
+      <div class="item-num">03</div>
+      <div class="item-content">
+        <span class="field-heading">Обучение и повышение квалификации бухгалтеров</span>
+        <span class="field-body">Курсы, наставничество и разборы для бухгалтеров, которые хотят вырасти до уровня эксперта и финансового советника.</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- QUOTE: MISSION -->
+<div class="quote-divider">
+  <div class="quote-label">Наша миссия</div>
+  <div class="quote-text">Помочь каждому клиенту обрести финансовую уверенность - через знания, поддержку и практические инструменты.</div>
+</div>
+
+<!-- BLOCK 04: EXPERT -->
+<div class="page-block" data-block="expert">
+  <div class="block-num">Блок 04</div>
+  <div class="block-type">Об эксперте</div>
+
+  <span class="field-label">Заголовок</span>
+  <span class="field-heading">Айнур Рысмаганбетова</span>
+
+  <span class="field-label" style="margin-top:12px">Должность / роль</span>
+  <span class="field-sub">Профессиональный бухгалтер · Финансовый коуч · Налоговый эксперт</span>
+
+  <span class="field-label" style="margin-top:12px">Биография</span>
+  <span class="field-body">Более 20 лет практики в бухгалтерском учёте, налогообложении и финансовом консалтинге. Работаю с предпринимателями и частными лицами - от разовых консультаций до долгосрочного сопровождения. Моя цель - не просто дать ответ, а научить клиента понимать свои финансы.</span>
+
+  <hr class="section-div" />
+
+  <span class="field-label">Сертификаты и регалии (каждый с новой строки)</span>
+  <span class="field-body">CAP - Certified Accounting Practitioner
+<br>CIPA - Certified International Professional Accountant
+<br>ICU - Профессиональный коуч, Международная ассоциация
+<br>ПБ - Сертификат Профессионального Бухгалтера</span>
+
+  <hr class="section-div" />
+
+  <span class="field-label">Цифры (статистика)</span>
+  <div class="items-list" style="flex-direction: row; flex-wrap: wrap; gap: 12px;">
+    <div class="item-card" style="flex: 1; min-width: 140px; text-align: center;">
+      <span class="field-heading">20+</span>
+      <span class="field-body">лет в профессии</span>
+    </div>
+    <div class="item-card" style="flex: 1; min-width: 140px; text-align: center;">
+      <span class="field-heading">4</span>
+      <span class="field-body">международных сертификата</span>
+    </div>
+    <div class="item-card" style="flex: 1; min-width: 140px; text-align: center;">
+      <span class="field-heading">3</span>
+      <span class="field-body">направления экспертизы</span>
+    </div>
+  </div>
+</div>
+
+<!-- QUOTE: STRATEGY -->
+<div class="quote-divider">
+  <div class="quote-label">Наша стратегия</div>
+  <div class="quote-text">Мы не останавливаемся на полпути. Пока у клиента есть задача - мы рядом. До результата, до уверенности, до финансовой свободы.</div>
+</div>
+
+<!-- BLOCK 05: HOW WE WORK -->
+<div class="page-block" data-block="process">
+  <div class="block-num">Блок 05</div>
+  <div class="block-type">Как мы работаем / Процесс</div>
+
+  <span class="field-label">Заголовок</span>
+  <span class="field-heading">Как строится работа</span>
+
+  <span class="field-label" style="margin-top:12px">Подзаголовок</span>
+  <span class="field-sub">Простой и понятный процесс - от первого контакта до результата.</span>
+
+  <div class="items-list" style="margin-top:16px">
+    <div class="item-card" style="border-left: 3px solid #111;">
+      <span class="field-label">Шаг 1</span>
+      <span class="field-heading">Первичная консультация</span>
+      <span class="field-body">Разбираем вашу ситуацию, задачи и цели. Определяем формат и объём работы.</span>
+    </div>
+    <div class="item-card" style="border-left: 3px solid #111;">
+      <span class="field-label">Шаг 2</span>
+      <span class="field-heading">Анализ и план</span>
+      <span class="field-body">Изучаю текущее состояние финансов. Составляю конкретный план действий.</span>
+    </div>
+    <div class="item-card" style="border-left: 3px solid #111;">
+      <span class="field-label">Шаг 3</span>
+      <span class="field-heading">Работа и сопровождение</span>
+      <span class="field-body">Реализуем план. Я на связи - отвечаю на вопросы, корректирую курс по ходу.</span>
+    </div>
+    <div class="item-card" style="border-left: 3px solid #111;">
+      <span class="field-label">Шаг 4</span>
+      <span class="field-heading">Результат</span>
+      <span class="field-body">Вы получаете не просто ответы - вы получаете систему, которая работает сама.</span>
+    </div>
+  </div>
+</div>
+
+<!-- BLOCK 06: RESULTS -->
+<div class="page-block" data-block="results">
+  <div class="block-num">Блок 06</div>
+  <div class="block-type">Результаты клиентов / Кейсы</div>
+
+  <span class="field-label">Заголовок</span>
+  <span class="field-heading">Что Вы получите</span>
+
+  <span class="field-label" style="margin-top:12px">Подзаголовок</span>
+  <span class="field-sub">Конкретные результаты, а не общие слова.</span>
+
+  <div class="items-list">
+    <div class="item-card">
+      <span class="field-heading">Снизили налоговую нагрузку на 30%</span>
+      <span class="field-body">Предприниматель, ТОО, сфера торговли. После аудита нашли законные способы оптимизации налогов без рисков.</span>
+    </div>
+    <div class="item-card">
+      <span class="field-heading">Бухгалтер вырос до финансового директора</span>
+      <span class="field-body">После 3 месяцев наставничества специалист получил повышение и уверенно ведёт управленческий учёт.</span>
+    </div>
+    <div class="item-card">
+      <span class="field-heading">Стартап прошёл первый год без штрафов</span>
+      <span class="field-body">Помогла выстроить учёт с нуля: открытие ИП, режим налогообложения, кассовая дисциплина, отчётность.</span>
+    </div>
+  </div>
+
+</div>
+
+<!-- BLOCK 07: GAME -->
+<div class="page-block" data-block="game">
+  <div class="block-num">Блок 07</div>
+  <div class="block-type">Трансформационная игра</div>
+
+  <span class="field-label">Заголовок</span>
+  <span class="field-heading">Авторская трансформационная игра по финансовой грамоте</span>
+
+  <span class="field-label" style="margin-top:12px">Описание</span>
+  <span class="field-sub">Уникальный инструмент для групповой и корпоративной работы. Игра меняет отношение к деньгам через живое взаимодействие, а не лекцию.</span>
+
+  <span class="field-label" style="margin-top:12px">Для кого</span>
+  <span class="field-body">- Корпоративные команды и отделы<br>- Предпринимательские клубы и бизнес-сообщества<br>- Тренинги и конференции по финансам<br>- Учебные заведения (колледжи, университеты)</span>
+
+  <span class="field-label" style="margin-top:12px">Что участники уносят с собой</span>
+  <span class="field-body">Новое мышление о деньгах, конкретные инструменты личного бюджета, понимание как деньги работают в бизнесе.</span>
+
+  <div class="cta-box" style="margin-top:20px">
+    <span class="field-label">Кнопка (призыв к действию)</span>
+    <span class="field-heading" style="font-size:20px">Заказать игру для вашей команды</span>
+  </div>
+</div>
+
+<!-- BLOCK 08: FAQ -->
+<div class="page-block" data-block="faq">
+  <div class="block-num">Блок 08</div>
+  <div class="block-type">Часто задаваемые вопросы</div>
+
+  <span class="field-label">Заголовок</span>
+  <span class="field-heading">Частые вопросы</span>
+
+  <div class="items-list">
+    <div class="item-card">
+      <span class="field-heading">Работаете ли вы удалённо?</span>
+      <span class="field-body">Да, большинство задач решаются онлайн - через WhatsApp, Telegram или Zoom. Работаю со всем Казахстаном.</span>
+    </div>
+    <div class="item-card">
+      <span class="field-heading">Вы работаете только с бизнесом?</span>
+      <span class="field-body">Нет, работаю также с физическими лицами: личный бюджет, накопления, финансовое планирование.</span>
+    </div>
+    <div class="item-card">
+      <span class="field-heading">В каких программах ведётся учёт?</span>
+      <span class="field-body">Учёт ведётся в лицензионных программных продуктах 1С с обязательным еженедельным резервным копированием информационных баз предпринимателей.</span>
+    </div>
+    <div class="item-card">
+      <span class="field-heading">Сообщат ли о недостающей документации в учёте?</span>
+      <span class="field-body">Да. Мы осуществляем мониторинг недостающей документации, после чего в обязательном порядке направляем информацию с перечнем недостающих документов в табличной форме.</span>
+    </div>
+    <div class="item-card">
+      <span class="field-heading">Как часто происходит мониторинг налоговых уведомлений?</span>
+      <span class="field-body">Мы ежедневно производим мониторинг Кабинета Налогоплательщика и своевременно отвечаем на все налоговые уведомления путём создания пояснения или направления официального письма в Налоговое Управление.</span>
+    </div>
+    <div class="item-card">
+      <span class="field-heading">Что, если бухгалтер допустил серьёзную ошибку?</span>
+      <span class="field-body">По договору, если мы допустили ошибку — мы за это платим. В случае, если ошибку допустил штатный бухгалтер, его намного сложнее привлечь к ответственности — юридически такой штраф всё равно будет числиться на вас.</span>
+    </div>
+    <div class="item-card">
+      <span class="field-heading">Как хранятся документы?</span>
+      <span class="field-body">Документация хранится в специально отведённом архиве и предварительно сортируется по папкам-регистраторам. Благодаря этому мы можем быстро найти нужный документ и предоставить его по первому требованию.</span>
+    </div>
+    <div class="item-card">
+      <span class="field-heading">С какой периодичностью происходит сверка с контрагентами?</span>
+      <span class="field-body">Сверка происходит ежеквартально во время проверки учёта руководителями отделов, чтобы у предпринимателя всегда были объективные данные по остаткам дебиторской и кредиторской задолженностей.</span>
+    </div>
+    <div class="item-card">
+      <span class="field-heading">Как происходит отправка возвратных документов контрагентам?</span>
+      <span class="field-body">Наш офис-менеджер самостоятельно произведёт почтовую рассылку всех возвратных документов. Вам останется только возместить почтовые услуги.</span>
+    </div>
+  </div>
+</div>
+
+<!-- BLOCK 09: REVIEWS -->
+<div class="page-block" data-block="reviews">
+  <div class="block-num">Блок 09</div>
+  <div class="block-type">Отзывы клиентов</div>
+
+  <span class="field-label">Заголовок блока</span>
+  <span class="field-heading">Что говорят клиенты</span>
+
+  <div class="items-list" style="margin-top:20px">
+    <div class="item-card" style="flex-direction:column; gap:8px;">
+      <span class="field-body">«Столько установок оказывается ещё осталось... Благодарю тебя за сегодняшнюю сессию. Буду выполнять домашнее задание. Сразу скажу — появляется сопротивление. Но я уже знаю, что смогу сделать так, чтобы денег было много.»</span>
+      <span class="field-label" style="margin-top:4px">— Шынар, предприниматель</span>
+    </div>
+    <div class="item-card" style="flex-direction:column; gap:8px;">
+      <span class="field-body">«Я тебе много раз говорила про твои качества как человека — в тебе прежде всего человечность. Как профессионал ты состоялась ещё больше, имея ответственность. Когда я обращаюсь к тебе, даже если ты в данный момент не имеешь ответа — ты обязательно вернёшься с ответом. Я счастливый клиент, Айнур.»</span>
+      <span class="field-label" style="margin-top:4px">— Алтынгуль, предприниматель</span>
+    </div>
+    <div class="item-card" style="flex-direction:column; gap:8px;">
+      <span class="field-body">«Мой стаж в предпринимательской деятельности — 16 лет. Наше предприятие работает в сфере транспортно-логистических услуг. Айнур Сериковна не просто разложила по полкам различия между режимами налогообложения для логиста, но и чётко показала, как легально минимизировать налоговую базу без риска доначислений. Главные плюсы в её работе: оперативность, конкретика и полное погружение в учётный процесс — никакой «воды», только суть. Я действительно счастлива, что нашла компетентного эксперта. Рекомендую как высококлассного профи.»</span>
+      <span class="field-label" style="margin-top:4px">— Юлия, предприниматель, транспортно-логистические услуги</span>
+    </div>
+    <div class="item-card" style="flex-direction:column; gap:8px;">
+      <span class="field-body">«Работать с Айнур очень комфортно. Как специалист знает и выполняет свою работу чётко и вовремя. Может объяснить на простом языке сложные вопросы по финансам и налогам. Быстро решает вопросы по налогам.»</span>
+      <span class="field-label" style="margin-top:4px">— Данагуль, предприниматель</span>
+    </div>
+    <div class="item-card" style="flex-direction:column; gap:8px;">
+      <span class="field-body">«Работаю с Айнурой больше 4 лет. Айнур — бухгалтер очень грамотный, ответственный. Отлично знает Налоговый Кодекс. Все мои отчёты составляет без ошибок и сдаёт вовремя. Нареканий со стороны налоговой нет. Благодаря ей после сдачи годового отчёта я получила благодарность от НК. Айнур — профессионал с большой буквы.»</span>
+      <span class="field-label" style="margin-top:4px">— Жанилсын Бралина, предприниматель</span>
+    </div>
+  </div>
+</div>
+
+<!-- BLOCK 10: CONTACTS -->
+<div class="page-block" data-block="contacts">
+  <div class="block-num">Блок 10</div>
+  <div class="block-type">Финальный CTA</div>
+
+  <span class="field-label">Заголовок</span>
+  <span class="field-heading">Готовы начать?</span>
+
+  <span class="field-label" style="margin-top:12px">Подзаголовок</span>
+  <span class="field-sub">Напишите - разберём вашу ситуацию и определим с чего начать.</span>
+
+  <div class="cta-box" style="margin-top:20px">
+    <span class="field-label">Кнопка (призыв к действию)</span>
+    <span class="field-heading" style="font-size:20px">Записаться на консультацию</span>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<div class="page-block" data-block="footer" style="background:#f3f3f3; border-top: 2px dashed #bbb;">
+  <div class="block-type">Контактные данные / Подвал</div>
+
+  <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap:16px; margin-top:16px;">
+    <div>
+      <span class="field-label">Телефон / WhatsApp</span>
+      <span class="field-body">+7 (771) 225-1020</span>
+    </div>
+    <div>
+      <span class="field-label">Telegram</span>
+      <span class="field-body">@Rys_ainur</span>
+    </div>
+    <div>
+      <span class="field-label">Instagram</span>
+      <span class="field-body">@ainur_rys</span>
+    </div>
+    <div>
+      <span class="field-label">Сайт</span>
+      <span class="field-body">finguide.kz</span>
+    </div>
+    <div>
+      <span class="field-label">Город</span>
+      <span class="field-body">г. Актобе, Казахстан</span>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Wrap block content in block-inner
+  document.querySelectorAll('.page-block').forEach(block => {
+    const inner = document.createElement('div');
+    inner.className = 'block-inner';
+    while (block.firstChild) inner.appendChild(block.firstChild);
+    block.appendChild(inner);
+  });
+  // Smooth scroll
+  document.querySelectorAll('.nav-link, .mobile-menu a').forEach(a => {
+    a.addEventListener('click', e => {
+      const href = a.getAttribute('href');
+      if (!href || !href.startsWith('#')) return;
+      e.preventDefault();
+      const target = href.slice(1);
+      const el = document.querySelector('[data-block="' + target + '"]');
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      document.getElementById('site-header').classList.remove('menu-open');
+    });
+  });
+</script>
+
+</body>
+</html>
